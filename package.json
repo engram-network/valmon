@@ -1,0 +1,48 @@
+{
+  "name": "validator-monitor",
+  "version": "0.0.1",
+  "description": "Sidecar to monitor validators for unhelpful, but not slashable behaviour",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "NODE_ENV=dev mocha 'test/**/*.spec.js'",
+    "prepare": "husky install",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajsutton/validator-monitor.git"
+  },
+  "keywords": [
+    "ethereum",
+    "eth2",
+    "beacon"
+  ],
+  "author": "Adrian Sutton <adrian.sutton@consensys.net>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ajsutton/validator-monitor/issues"
+  },
+  "homepage": "https://github.com/ajsutton/validator-monitor#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "husky": "^7.0.2",
+    "mocha": "^9.1.1",
+    "npm-watch": "^0.11.0",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "bitset": "^5.1.1",
+    "eventsource": "^1.1.0",
+    "got": "^11.8.2"
+  }
+}
